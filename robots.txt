@@ -1,0 +1,72 @@
+########################################################################
+# Sources et inspirations
+# - http://robots-txt.com/
+# - http://www.seomix.fr/robots-txt-wordpress/
+# Sous [licence MIT](http://opensource.org/licenses/MIT "The MIT licence")
+########################################################################
+
+
+# Règles pour tous les robots
+########################################################################
+User-agent: *
+
+# Désindexer un répertoire.
+# NB : Ne pas oublier le slash de fin !
+Disallow: /repertoire/
+
+# Désindexer un fichier.
+Disallow: /repertoire/fichier.html
+
+# Désindexer les répertoires présents sur certains hébergeurs
+Disallow: /cgi-bin/
+
+# Désindexer les fichiers qui n'ont pas lieu d'être
+Disallow: /*.php$
+Disallow: /*.inc$
+Disallow: /*.gz$
+Disallow: /*.cgi$
+
+
+# Règles pour Wordpress
+# ----------------------------------------------------------------------
+# Désindexer les URL avec des paramètres (duplication de contenu)
+Disallow: /*?
+
+# Désindexer la page de connexion
+Disallow: /wp-login.php
+
+# Désindexer les fichiers du cœur de WordPress (contenus inutiles)
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/languages/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+
+# Désindexer les URL de ping et de trackback
+Disallow: */trackback
+
+# Désindexer les flux RSS sauf le principal
+# Enlever /* pour bloquer tous les flux
+Disallow: /*/feed
+
+# Désindexer les URL de commentaire (flux RSS inclus)
+Disallow: /*/comments
+
+
+# Règles spécifiques pour certains robots
+########################################################################
+
+# Bing
+User-agent: bingbot
+
+# Yahoo!
+User-agent: Slurp
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+
+# Galaxie Google
+User-agent: Googlebot-Image
+User-agent: Googlebot-Video
+User-agent: Googlebot-News
+User-agent: Googlebot-Mobile
