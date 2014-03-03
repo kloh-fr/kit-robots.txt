@@ -2,7 +2,7 @@
 # Sources et inspirations
 # - http://robots-txt.com/
 # - http://www.seomix.fr/robots-txt-wordpress/
-# Sous [licence MIT](http://opensource.org/licenses/MIT "The MIT licence")
+# Sous licence MIT : http://opensource.org/licenses/MIT
 ########################################################################
 
 
